@@ -1,0 +1,238 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Fonts/BaksoSapi.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Source/Main.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 635.169, 367.562 )
+scale = Vector2( 1.66666, 1.27792 )
+texture = ExtResource( 3 )
+
+[node name="Header" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -208.5
+margin_top = 47.5288
+margin_right = 208.5
+margin_bottom = 124.529
+grow_horizontal = 2
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Giua Emulator"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -212.0
+margin_top = -175.36
+margin_right = 212.0
+margin_bottom = -121.36
+custom_constants/separation = 20
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Name"]
+margin_top = 5.0
+margin_right = 105.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 104, 44 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nome"
+align = 1
+valign = 1
+
+[node name="Value" type="LineEdit" parent="Name"]
+margin_left = 125.0
+margin_right = 425.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "player"
+
+[node name="IP" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -212.0
+margin_top = -88.876
+margin_right = 212.0
+margin_bottom = -34.876
+custom_constants/separation = 20
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="IP"]
+margin_top = 5.0
+margin_right = 104.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 104, 44 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "IP"
+align = 1
+valign = 1
+
+[node name="Value" type="LineEdit" parent="IP"]
+margin_left = 124.0
+margin_right = 424.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "95.238.84.145"
+
+[node name="Port" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -212.0
+margin_top = -10.2056
+margin_right = 212.0
+margin_bottom = 43.7944
+custom_constants/separation = 20
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="Port"]
+margin_top = 5.0
+margin_right = 115.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 104, 44 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Porta"
+align = 1
+valign = 1
+
+[node name="Value" type="SpinBox" parent="Port"]
+margin_left = 135.0
+margin_right = 435.0
+margin_bottom = 54.0
+rect_min_size = Vector2( 300, 0 )
+size_flags_vertical = 5
+theme = SubResource( 3 )
+max_value = 10000.0
+value = 80.0
+editable = false
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -208.501
+margin_top = 73.6563
+margin_right = 215.499
+margin_bottom = 133.656
+custom_constants/separation = 20
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="quit_button" type="Button" parent="Buttons"]
+margin_right = 200.0
+margin_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 200, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Esci"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="join_button" type="Button" parent="Buttons"]
+margin_left = 220.0
+margin_right = 420.0
+margin_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 200, 60 )
+custom_fonts/font = SubResource( 2 )
+text = "Entra"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -52.0
+margin_top = -199.183
+margin_right = 52.0
+margin_bottom = -155.183
+grow_horizontal = 2
+rect_min_size = Vector2( 104, 44 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.368627, 0.368627, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ServerInfo" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -243.5
+margin_top = -136.521
+margin_right = 243.5
+margin_bottom = 1.4787
+grow_horizontal = 2
+rect_min_size = Vector2( 104, 44 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.368627, 0.368627, 1 )
+text = "Lo scopo di questo emulatore e' .. non ci sta uno scopo"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Buttons/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Buttons/join_button" to="." method="_on_join_button_pressed"]

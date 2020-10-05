@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Chat.gd" type="Script" id=1]
+
+[node name="Chat" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -842.0
+margin_bottom = -506.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 438.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 190.0
+margin_right = 438.0
+margin_bottom = 214.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 47.0
+margin_bottom = 19.0
+text = "[Player]"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+margin_left = 51.0
+margin_right = 438.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
